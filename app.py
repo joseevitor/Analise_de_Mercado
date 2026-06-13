@@ -140,7 +140,7 @@ fig_sales_by_cathegory = px.bar(sales_by_cathegory,
 fig_sales_by_cathegory.update_layout(showlegend=False, yaxis_title='Quantidade de vendas')
 
 # View on streamlit
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(['Receita', 'Quantidade de vendas', 'Setores', 'Fornecedores', 'Cadastro', 'Assistente', 'Beneficiários', 'Produtos em vencimento'])
+tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(['Receita', 'Quantidade de vendas', 'Vendedores', 'Fornecedores', 'Cadastro em produção', 'Assistente Virtual em produção', 'Beneficiários em produção'])
 
 with tab1:
     coluna1, coluna2 = st.columns(2)
@@ -207,30 +207,30 @@ with tab5:
     with coluna2:
         st.metric('Quantidade de vendas', format_number(data.shape[0]))
 
-with tab6:
-    coluna1, coluna2 = st.columns(2)
-    with coluna1:
-        st.metric('Receita', format_number(data['Preço'].sum(), 'R$'))
+#with tab6:
+#    coluna1, coluna2 = st.columns(2)
+#    with coluna1:
+#        st.metric('Receita', format_number(data['Preço'].sum(), 'R$'))
 
-    with coluna2:
-        st.metric('Quantidade de vendas', format_number(data.shape[0]))
+#    with coluna2:
+#        st.metric('Quantidade de vendas', format_number(data.shape[0]))
    
 
-with tab7:
-    coluna1, coluna2 = st.columns(2)
-    with coluna1:
-        st.metric('Receita', format_number(data['Preço'].sum(), 'R$'))
+#with tab7:
+#    coluna1, coluna2 = st.columns(2)
+#    with coluna1:
+#        st.metric('Receita', format_number(data['Preço'].sum(), 'R$'))
 
-    with coluna2:
-        st.metric('Quantidade de vendas', format_number(data.shape[0]))
+#    with coluna2:
+#        st.metric('Quantidade de vendas', format_number(data.shape[0]))
    
-with tab8:
-    coluna1, coluna2 = st.columns(2)
-    with coluna1:
-        st.metric('Receita', format_number(data['Preço'].sum(), 'R$'))
+#with tab8:
+#  coluna1, coluna2 = st.columns(2)
+#  with coluna1:
+#       st.metric('Receita', format_number(data['Preço'].sum(), 'R$'))
 
-    with coluna2:
-        st.metric('Quantidade de vendas', format_number(data.shape[0]))
+#  with coluna2:
+#       st.metric('Quantidade de vendas', format_number(data.shape[0]))
 
 
 st.dataframe(data)
